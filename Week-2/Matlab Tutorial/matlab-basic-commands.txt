@@ -1,0 +1,129 @@
+>> d=diag(2:3)
+
+d =
+
+     2     0
+     0     3
+
+>> A = [1 2; 3 4; 5 6]
+
+A =
+
+     1     2
+     3     4
+     5     6
+
+>> size(A)
+
+ans =
+
+     3     2
+
+>> size(A, 1)
+
+ans =
+
+     3
+
+>> size(A, 2)
+
+ans =
+
+     2
+
+>> v = [1 2 3 4]
+
+v =
+
+     1     2     3     4
+
+>> length(v)
+
+ans =
+
+     4
+
+>> length(A)
+
+ans =
+
+     3
+
+>> pwd
+
+ans =
+
+    '/MATLAB Drive'
+
+>> ls
+featuresX.dat  featuresY.dat  hello.mat  hello.txt  Published
+
+>> load featuresX.dat
+>> load featuresY.dat
+>> who
+
+Your variables are:
+
+A          ans        d          featuresX  featuresY  v          
+
+>> featuresX
+
+featuresX =
+
+        1000           4
+        2000           5
+        1323           7
+        1323           8
+        6879           0
+
+>> size(featuresX)
+
+ans =
+
+     5     2
+
+>> featuresY
+
+featuresY =
+
+      213213
+      131243
+      353453
+      459347
+      364723
+
+>> size(featuresY)
+
+ans =
+
+     5     1
+
+>> load featuresY.dat
+>> size(featuresY)
+
+ans =
+
+     5     1
+
+>> whos
+  Name           Size            Bytes  Class     Attributes
+
+  A              3x2                48  double              
+  ans            1x2                16  double              
+  d              2x2                32  double              
+  featuresX      5x2                80  double              
+  featuresY      5x1                40  double              
+  v              1x4                32  double              
+
+>> save hello.mat v
+>> clear
+>> whos
+>> load hello.mat
+>> save hello.txt v -ascii % save the file as ascii - saving to .mat saves in binary format
+>> load hello.txt
+>> whos
+  Name       Size            Bytes  Class     Attributes
+
+  hello      1x4                32  double              
+  v          1x4                32  double              
+
